@@ -1,8 +1,25 @@
-a = int(input("Enter first number: "))
-b = int(input("Enter second number: "))
+def add(a, b):
+    return a + b
 
-addition = a + b
-subtraction = a - b
 
-print("Addition of votes =", addition)
-print("Subtraction of votes =", subtraction)
+def subtract(a, b):
+    return a - b
+
+
+def multiply(a, b):
+    return a * b
+
+
+def divide(a, b):
+    if b == 0:
+        raise ValueError("Cannot divide by zero.")
+    return a / b
+
+
+num1 = float(input("Enter the first number: "))
+num2 = float(input("Enter the second number: "))
+
+print("Addition:", add(num1, num2))
+print("Subtraction:", subtract(num1, num2))
+print("Multiplication:", multiply(num1, num2))
+print("Division:", divide(num1, num2))
